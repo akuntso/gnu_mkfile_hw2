@@ -1,0 +1,13 @@
+main.o: main.c
+	gcc -c main.c
+
+src1.o: src1.c
+	gcc -c src1.c
+
+all: my_program
+
+my_program: main.o src1.o
+	gcc main.o src1.o -o my_program
+
+clean:
+	rm -f *.o my_program
